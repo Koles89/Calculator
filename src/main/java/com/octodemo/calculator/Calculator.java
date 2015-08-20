@@ -11,7 +11,7 @@ public class Calculator {
 	public double sub(double a, double b) {
 		return a-b;
 	}
-	
+	//This is the multiplication operation
 	public double multiply(double a, double b) {
 		return a*b;
 	}
