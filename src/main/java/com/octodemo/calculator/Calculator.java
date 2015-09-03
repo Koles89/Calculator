@@ -14,7 +14,7 @@ public class Calculator {
 	
 	//This is the multiplication operation
 	public double multiply(double a, double b) {
-		//empty//
+		//SFR//
 		return a*b;
 		
 	}
