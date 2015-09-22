@@ -15,7 +15,7 @@ public class CalculatorTest {
 	@Test
 	public void testDiv() {
 		Calculator calc = new Calculator();
-		assertEquals(4, calc.add(2, 2), 0);
+		assertEquals(4, calc.division(2, 2), 0);
 	}
 	
 	
