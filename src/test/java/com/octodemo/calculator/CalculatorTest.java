@@ -11,5 +11,13 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		assertEquals(4, calc.add(2, 2), 0);
 	}
+	
+	@Test
+	public void testDiv() {
+		Calculator calc = new Calculator();
+		assertEquals(4, calc.add(2, 2), 0);
+	}
+	
+	
 
 }
