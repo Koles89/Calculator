@@ -17,6 +17,12 @@ public class Calculator {
 		return a*b;
 		
 	}
+	
+	//This is the division operation
+	public double division(double a, double b) {
+		return a/b;
+		
+	}
 
 
 }
