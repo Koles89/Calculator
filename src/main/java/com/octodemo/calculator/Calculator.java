@@ -20,7 +20,7 @@ public class Calculator {
 	
 	//This is the division operation
 	public double division(double a, double b) {
-		//Comment
+		//Commentaire riche
 		return a/b;
 		
 	}
