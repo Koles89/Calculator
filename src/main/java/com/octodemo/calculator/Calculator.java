@@ -1,4 +1,4 @@
-package com.github.demo;
+package com.octodemo.calculator;
 
 public class Calculator {
 	// This is an addition
