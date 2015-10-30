@@ -1,6 +1,7 @@
 package com.octodemo.calculator;
 
 public class Calculator {
+
 	public double add(double a, double b) {
 		return a+b;
 	}
@@ -16,6 +17,13 @@ public class Calculator {
 
 	public double div(double a, double b) {
 		return a/b;
+	}
+
+	//This is the division operation
+	public double division(double a, double b) {
+		//Commentaire ultra super riche
+		return a/b;
+
 	}
 
 
