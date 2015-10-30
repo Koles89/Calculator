@@ -1,4 +1,4 @@
-package com.github.demo;
+package com.octodemo.calculator;
 
 import static org.junit.Assert.assertEquals;
 
