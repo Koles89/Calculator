@@ -1,4 +1,4 @@
-package com.github.demo;
+package com.octodemo.calculator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,16 +8,17 @@ public class CalculatorTest {
 //TEST2
 	@Test
 	public void testAdd() {
+		//Un autre commentaire
 		Calculator calc = new Calculator();
 		assertEquals(4, calc.add(2, 2), 0);
 	}
-	
+
 	@Test
 	public void testDiv() {
 		Calculator calc = new Calculator();
-		assertEquals(4, calc.division(2, 2), 0);
+		assertEquals(1, calc.division(2, 2), 0);
 	}
-	
-	
+
+
 
 }
