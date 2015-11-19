@@ -22,7 +22,6 @@ public class Calculator {
 
 	//This is the division operation
 	public double division(double a, double b) {
-		//Commentaire ultra super riche
 		return a/b;
 
 	}
