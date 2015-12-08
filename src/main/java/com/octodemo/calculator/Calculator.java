@@ -6,7 +6,7 @@ public class Calculator {
 		return a+b;
 	}
 	
-	//Un autre commentaire!!!! 
+	//Un autre commentaire top! 
 	public double sub(double a, double b) {
 		return a-b;
 	}
@@ -16,7 +16,7 @@ public class Calculator {
 
 	}
 
-	//Commentaire super top !!!
+	//Commentaire super top
 	public double div(double a, double b) {
 		return a/b;
 	}
