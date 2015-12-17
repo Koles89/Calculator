@@ -11,8 +11,9 @@ public class Calculator {
 		return a-b;
 	}
 
+	
 	public double multiply(double a, double b) {
-		return a*b;
+		return (a*b);
 
 	}
 
@@ -21,11 +22,6 @@ public class Calculator {
 		return a/b;
 	}
 
-	//This is the division operation
-	public double division(double a, double b) {
-		return a/b;
-
-	}
 
 
 }
