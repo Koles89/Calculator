@@ -13,7 +13,7 @@ public class Calculator {
 
 	
 	public double multiply(double a, double b) {
-		//This is some Airbus code
+		//This is the AMEX Payment
 		return a*b;
 
 	}
