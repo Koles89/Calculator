@@ -13,7 +13,7 @@ public class Calculator {
 
 	
 	public double multiply(double a, double b) {
-		//This is the AMEX Payment
+		//This is the BBVA Payment
 		return a*b;
 
 	}
