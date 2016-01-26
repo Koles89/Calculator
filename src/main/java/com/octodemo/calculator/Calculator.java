@@ -3,11 +3,13 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
+		// Commentaire 2
 		return a+b;
 	}
 	
 	//Un autre commentaire top
 	public double sub(double a, double b) {
+		// Commentaire 1
 		return a-b;
 	}
 
