@@ -9,6 +9,7 @@ This is the ultimate crazy scientific calculator (limited to 4 operations) witho
 - *Badges*
 - Deployements
 - Emoticons :+1: :tada: :grin:
+- [GitHub Pages site]( https://octodemo.com/pages/OctoCheese/Calculator)
 
 You can also have a look at code samples
 ```java
