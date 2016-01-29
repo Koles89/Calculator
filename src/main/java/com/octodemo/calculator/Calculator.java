@@ -3,7 +3,7 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-		// Commentaire 2 - here
+		// Much better comment
 		return a+b;
 	}
 	
@@ -15,9 +15,8 @@ public class Calculator {
 
 	
 	public double multiply(double a, double b) {
-		//This is the BBVA Payment
+		//This is the Garanti Payment
 		return a*b;
-
 	}
 
 	//Commentaire super top 
