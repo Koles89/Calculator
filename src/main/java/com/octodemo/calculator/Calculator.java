@@ -7,7 +7,7 @@ public class Calculator {
 		return a+b;
 	}
 	
-	//Un autre commentaire top
+	//This is the checkin implementation
 	public double sub(double a, double b) {
 		// Commentaire 1
 		return a-b;
