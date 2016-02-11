@@ -1,6 +1,9 @@
 # Calculator [![Build Status](https://travis.octodemo.com/OctoCheese/Calculator.svg?token=4JfJ19izssZfCpxkrhWU&branch=master)](https://travis.octodemo.com/OctoCheese/Calculator)
 This is the ultimate crazy scientific calculator (limited to 4 operations) without any ~~Bugs~~
 
+Am I synced?
+
+
 # Content
 - Issues 
 - Milestones 
