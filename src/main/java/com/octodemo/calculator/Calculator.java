@@ -3,14 +3,14 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-		// Change code 
-		return a+b;
+		// Implementing some kickass code 
+		return (a+b);
 	}
 	
 	//This is the checkin implementation
 	public double sub(double a, double b) {
-		// Commentaire 1
-		return a-b;
+		// This is the way it should be
+		return b-a;
 	}
 
 	
