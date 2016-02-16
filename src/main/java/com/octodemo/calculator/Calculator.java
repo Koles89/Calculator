@@ -10,7 +10,7 @@ public class Calculator {
 	//This is the checkin implementation
 	public double sub(double a, double b) {
 		// This is the way it should be
-		return b-a;
+		return a-b;
 	}
 
 	
