@@ -24,6 +24,4 @@
   "ignore" : [
   	"Calculator/org.apache.maven.plugins/maven-resources-plugin/testResources"
   ]
-
-
 }
