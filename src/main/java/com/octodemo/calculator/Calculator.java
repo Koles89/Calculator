@@ -3,7 +3,7 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-		// Implementing some kickass code 
+		// Implementing some kickass code Turkcell
 		return (a+b);
 	}
 	
@@ -21,7 +21,7 @@ public class Calculator {
 
 	//Commentaire super top 
 	public double div(double a, double b) {
-		return a/b;
+		return (a/b);
 	}
 
 
