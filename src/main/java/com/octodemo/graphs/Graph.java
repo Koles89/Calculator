@@ -1,5 +1,5 @@
 package com.octodemo.graphs;
-//Payment
+//Call
 public class Graph {
  public Graph() {
    super();
