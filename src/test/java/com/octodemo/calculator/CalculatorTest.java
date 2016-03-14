@@ -21,6 +21,7 @@ public class CalculatorTest {
 	@Test
 	public void testSub() {
 		Calculator calc = new Calculator();
+		// 2 = 4 - 2
 		assertEquals(2, calc.sub(4, 2), 0);
 	}
 
