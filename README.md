@@ -30,3 +30,4 @@ And create arrays :
 |Val 1|Val 2|Val 3|
   
   
+[Show me the bugs](https://octodemo.com/OctoCheese/Calculator/issues?q=is%3Aopen+is%3Aissue+label%3A%22bug+-+severity+1%22)
