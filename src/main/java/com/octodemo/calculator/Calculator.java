@@ -3,7 +3,7 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-		// Implementing some kickass code, right!!!!
+		// Implementing some kickass code, right
 		return (a+b);
 	}
 	
