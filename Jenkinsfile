@@ -21,6 +21,7 @@ node {
 def checkout () {
     stage 'Checkout code'
     checkout scm
+    setBuildStatus 'Build complete', 'SUCCESS'
 }
 
 def build () {
@@ -78,4 +79,14 @@ def shareM2(file) {
     // Set up a shared Maven repo so we don't need to download all dependencies on every build.
     writeFile file: 'settings.xml',
     text: "<settings><localRepository>${file}</localRepository></settings>"
+}
+
+void setBuildStatus(String message, String state) {
+  step([
+      $class: "GitHubCommitStatusSetter",
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/my-org/my-repo"],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+  ]);
 }
