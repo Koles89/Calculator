@@ -21,7 +21,7 @@ node {
 def checkout () {
     stage 'Checkout code'
     checkout scm
-    setBuildStatus 'Build complete', 'SUCCESS'
+    setBuildStatus 'continuous-integration/jenkins/checkout', 'Build complete', 'SUCCESS'
 }
 
 def build () {
@@ -81,11 +81,11 @@ def shareM2(file) {
     text: "<settings><localRepository>${file}</localRepository></settings>"
 }
 
-void setBuildStatus(String message, String state) {
+void setBuildStatus(String context, String message, String state) {
   step([
       $class: "GitHubCommitStatusSetter",
       reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://octodemo.com/OctoCheese/Calculator"],
-      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: context],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
   ]);
