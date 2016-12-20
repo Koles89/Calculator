@@ -20,12 +20,12 @@ node {
 
 def checkout () {
     stage 'Checkout code'
-    setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
+    setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'pending'
     checkout scm
     if (currentBuild.result == "UNSTABLE") {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'SUCCESS'
+        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out failed', 'failure'
      } else {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'SUCCESS'
+        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'success'
      }
 }
 
