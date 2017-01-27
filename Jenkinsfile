@@ -19,57 +19,61 @@ node {
 }
 
 def checkout () {
-    stage 'Checkout code'
-    setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
-    checkout scm
-    if (currentBuild.result == "UNSTABLE") {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out failed', 'FAILURE'
-     } else {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'SUCCESS'
-     }
+    stage('Checkout code') {
+        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
+        checkout scm
+        if (currentBuild.result == "UNSTABLE") {
+            setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out failed', 'FAILURE'
+        } else {
+            setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'SUCCESS'
+        }
+    }
 }
 
 def build () {
-    stage 'Build'
-    setBuildStatus 'continuous-integration/jenkins/build', 'Building...', 'PENDING'
-    // cache maven artifacts
-    shareM2 '/tmp/m2repo'
-    mvn 'clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V'
+    stage('Build') {
+        setBuildStatus 'continuous-integration/jenkins/build', 'Building...', 'PENDING'
+        // cache maven artifacts
+        shareM2 '/tmp/m2repo'
+        mvn 'clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V'
     
-    if (currentBuild.result == "UNSTABLE") {
-        setBuildStatus 'continuous-integration/jenkins/build', 'Building failed', 'FAILURE'
-     } else {
-        setBuildStatus 'continuous-integration/jenkins/build', 'Building completed', 'SUCCESS'
-     }
+        if (currentBuild.result == "UNSTABLE") {
+            setBuildStatus 'continuous-integration/jenkins/build', 'Building failed', 'FAILURE'
+        } else {
+            setBuildStatus 'continuous-integration/jenkins/build', 'Building completed', 'SUCCESS'
+        }
+    }
 }
 
 
 def unitTest() {
-    stage 'Unit tests'
-    setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing...', 'PENDING'
-    mvn 'test -B -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true'
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
-    if (currentBuild.result == "UNSTABLE") {
-        setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing failed', 'FAILURE'
-        sh "exit 1"
-    } else {
-        setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing completed', 'SUCCESS'
-     }
+    stage('Unit tests') {
+        setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing...', 'PENDING'
+        mvn 'test -B -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true'
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+        if (currentBuild.result == "UNSTABLE") {
+            setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing failed', 'FAILURE'
+            sh "exit 1"
+        } else {
+            setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing completed', 'SUCCESS'
+        }
+    }
 }
 
 def allTests() {
-    stage 'All tests'
-    setBuildStatus 'continuous-integration/jenkins/all-tests', 'Running all tests...', 'PENDING'
-    // don't skip anything
-    mvn 'test -B'
-    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
-    if (currentBuild.result == "UNSTABLE") {
-        setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing failed', 'FAILURE'
-        // input "Unit tests are failing, proceed?"
-        sh "exit 1"
-    } else {
-        setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing completed', 'SUCCESS'
-     }
+    stage('All tests') {
+        setBuildStatus 'continuous-integration/jenkins/all-tests', 'Running all tests...', 'PENDING'
+        // don't skip anything
+        mvn 'test -B'
+        step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+        if (currentBuild.result == "UNSTABLE") {
+            setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing failed', 'FAILURE'
+            // input "Unit tests are failing, proceed?"
+            sh "exit 1"
+        } else {
+            setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing completed', 'SUCCESS'
+        }
+    }
 }
 
 def preview() {
