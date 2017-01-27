@@ -31,7 +31,7 @@ def checkout () {
 }
 
 def build () {
-    stage('Build) {
+    stage('Build') {
         setBuildStatus 'continuous-integration/jenkins/build', 'Building...', 'PENDING'
         // cache maven artifacts
         shareM2 '/tmp/m2repo'
