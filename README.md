@@ -10,7 +10,7 @@ curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch"
 curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance", "required_contexts": "["continuous-integration/jenkins/build"]"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
 
 ## Set status
-curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"state": "pending", "description": "Deploying to the Madrid Test Lab...", "target_url": "http://patch.myapp.com"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/565/statuses
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"state": "pending", "description": "Deploying to Test Lab...", "target_url": "http://patch.myapp.com"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/565/statuses
 
 
 # Content
