@@ -6,6 +6,8 @@ This is the ultimate crazy scientific calculator (limited to 4 operations) witho
 ## No status
 curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
 
+## With status
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance", "required_contexts": "["continuous-integration/jenkins/build"]"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
 
 
 
