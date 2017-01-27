@@ -109,6 +109,7 @@ void setBuildStatus(String context, String message, String state) {
   step([
       $class: "GitHubCommitStatusSetter",
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: context],
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://octodemo.com/OctoCheese/Calculator"],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
   ]);
