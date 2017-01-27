@@ -1,7 +1,12 @@
 # Calculator [![Build Status](https://travis.octodemo.com/OctoCheese/Calculator.svg?token=4JfJ19izssZfCpxkrhWU&branch=master)](https://travis.octodemo.com/OctoCheese/Calculator)
 This is the ultimate crazy scientific calculator (limited to 4 operations) without any ~~Bugs~~
 
-Am I synced?
+
+# Deploy
+## No status
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
+
+
 
 
 # Content
