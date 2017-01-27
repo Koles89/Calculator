@@ -3,12 +3,57 @@ This is the ultimate crazy scientific calculator (limited to 4 operations) witho
 
 
 # Deploy
-## No status
-curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
+## Without required context
+```
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "mybranch", "environment" : "Test Lab", "description" : "Ready for user acceptance"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
+```
 
-## With status
-curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "patch", "environment" : "Test Lab", "description" : "Ready for user acceptance", "required_contexts": "["continuous-integration/jenkins/build"]"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
+## With required context
+```
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "mybranch", "environment" : "Test Lab", "description" : "Ready for user acceptance", "required_contexts": ["continuous-integration/jenkins/build"]}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
+```
 
+Output 
+
+```
+{
+  "url": "https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142",
+  "id": 2142,
+  "sha": "7b991d1c0c1e23eb362f07bfe9b232b5929efb59",
+  "ref": "status",
+  "task": "deploy",
+  "payload": {
+
+  },
+  "environment": "Test Lab",
+  "description": "Ready for user acceptance",
+  "creator": {
+  ..
+  },
+  ...
+}
+```
+
+Now retrieve the deployment Id to send feedback about the deployment 
+
+## Set status
+
+```
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN"  -H "accept: application/vnd.github.ant-man-preview+json" -d '{"state": "pending", "description": "Deploying to Test Lab...", "log_url": "http://deploysystem.com/logs"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142/statuses
+```
+
+## Completed
+- For non-transient environments 
+
+```
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -H "accept: application/vnd.github.ant-man-preview+json" -d '{"state": "success", "description": "Deploying to Test Lab...", "log_url": "http://deploysystem.com/logs", "environment_url": "http://patch.myapp.com"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142/statuses
+```
+
+- For transient environments 
+
+```
+curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -H "accept: application/vnd.github.ant-man-preview+json" -d '{"state": "success", "description": "Deploying to Test Lab...", "log_url": "http://deploysystem.com/logs", "environment_url": "http://patch.myapp.com", "auto_inactive": false}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142/statuses
+```
 
 
 # Content
