@@ -1,1 +1,1 @@
-Select name, firstname from table
+Select name, fistname  from table where customer = ?
