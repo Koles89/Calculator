@@ -1,1 +1,1 @@
-Select * from table
+Select * from table where customer = ?
