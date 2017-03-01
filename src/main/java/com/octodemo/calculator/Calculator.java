@@ -15,7 +15,7 @@ public class Calculator {
 
 
 	public double multiply(double a, double b) {
-		//Change Payment!!!!!
+		//Change Payment
 		return a*b;
 	}
 
