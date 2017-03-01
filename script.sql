@@ -1,1 +1,1 @@
-Select * from table
+Select name, firstname from table
