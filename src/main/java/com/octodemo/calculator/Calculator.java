@@ -19,7 +19,7 @@ public class Calculator {
 		return a*b;
 	}
 
-	//Commentaire super top
+	//Commentaire super top///////
 	public double div(double a, double b) {
 		return a/b;
 	}
