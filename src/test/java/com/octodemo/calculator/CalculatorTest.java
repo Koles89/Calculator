@@ -7,7 +7,7 @@ import org.junit.Test;
 public class CalculatorTest {
 	@Test
 	public void testAdd() {
-		//This is the most complex operation
+		//This is the most complex operation xxxx
 		Calculator calc = new Calculator();
 		assertEquals(4, calc.add(2, 2), 0);
 	}
@@ -21,7 +21,7 @@ public class CalculatorTest {
 	@Test
 	public void testSub() {
 		Calculator calc = new Calculator();
-		// 2 = 4 - 2
+		// 2 = 4 - 2 ??? 
 		assertEquals(2, calc.sub(4, 2), 0);
 	}
 
