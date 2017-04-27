@@ -3,7 +3,7 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-// Implementing some kickass code to trigger a merge conflict
+// Implementing some kickass code for Air Liquide without conflict
 		return (a+b);
 	}
 
