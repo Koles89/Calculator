@@ -3,11 +3,11 @@ package com.octodemo.calculator;
 public class Calculator {
 
 	public double add(double a, double b) {
-// Implementing some kickass code for a new pull request for BDF
+	// Implementing some kickass code for a new pull request
 		return (a+b);
 	}
 
-	//This is the checkin implementation for Covea
+	//This is the checkin implementation
 	public double sub(double a, double b) {
 		// This is the way it should be
 		return a-b;
