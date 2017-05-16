@@ -98,6 +98,7 @@ def shareM2(file) {
 }
 
 void setBuildStatus(String context, String message, String state) {
+/*
   step([
       $class: "GitHubCommitStatusSetter",
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: context],
@@ -105,4 +106,5 @@ void setBuildStatus(String context, String message, String state) {
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
   ]);
+*/
 }
