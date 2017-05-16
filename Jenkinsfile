@@ -19,7 +19,7 @@ node {
 
 def checkout () {
     stage('Checkout code') {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
+//        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
         checkout scm
     }
 }
@@ -30,7 +30,7 @@ def build () {
         // cache maven artifacts
         shareM2 '/tmp/m2repo'
         mvn 'clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V'
-    
+ 
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/build', 'Building failed', 'FAILURE'
         } else {
