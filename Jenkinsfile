@@ -52,7 +52,6 @@ def unitTest() {
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing failed', 'FAILURE'
-            sh "exit 1"
         } else {
             setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing completed', 'SUCCESS'
         }
@@ -68,7 +67,6 @@ def allTests() {
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing failed', 'FAILURE'
             // input "Unit tests are failing, proceed?"
-            sh "exit 1"
         } else {
             setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing completed', 'SUCCESS'
         }
