@@ -19,13 +19,8 @@ node {
 
 def checkout () {
     stage('Checkout code') {
-        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
+//        setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out...', 'PENDING'
         checkout scm
-        if (currentBuild.result == "UNSTABLE") {
-            setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out failed', 'FAILURE'
-        } else {
-            setBuildStatus 'continuous-integration/jenkins/checkout', 'Checking out completed', 'SUCCESS'
-        }
     }
 }
 
@@ -35,7 +30,7 @@ def build () {
         // cache maven artifacts
         shareM2 '/tmp/m2repo'
         mvn 'clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V'
-    
+ 
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/build', 'Building failed', 'FAILURE'
         } else {
@@ -52,7 +47,6 @@ def unitTest() {
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing failed', 'FAILURE'
-            sh "exit 1"
         } else {
             setBuildStatus 'continuous-integration/jenkins/unit-tests', 'Unit testing completed', 'SUCCESS'
         }
@@ -68,7 +62,6 @@ def allTests() {
         if (currentBuild.result == "UNSTABLE") {
             setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing failed', 'FAILURE'
             // input "Unit tests are failing, proceed?"
-            sh "exit 1"
         } else {
             setBuildStatus 'continuous-integration/jenkins/all-tests', 'Testing completed', 'SUCCESS'
         }
