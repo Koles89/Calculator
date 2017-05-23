@@ -13,6 +13,7 @@ So many awesome things!!!
 === Jenkins
 
 === Travis
+include::{sourcedir}/../.travis.yml[lines:4]
 
 === Java
 
