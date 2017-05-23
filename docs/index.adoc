@@ -1,0 +1,24 @@
+= ChangeNow Documentation
+Alain Hélaïli <helaili@github.com>
+:showtitle:
+:toc: right
+:sourcedir: ../src
+:page-title: Caclulator Documentation
+:page-description: An application using cool concepts such as addition and subtraction.
+
+== What's in the app?
+
+So many awesome things!!!
+
+=== Jenkins
+
+=== Travis
+
+=== Java
+
+Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob/master/src/main/java/com/octodemo/calculator/Calculator.java#L5[the source code] can help generating the documentation below.
+
+[source,java,indent=0]
+----
+include::{sourcedir}/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
+----

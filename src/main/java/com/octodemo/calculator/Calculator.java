@@ -2,10 +2,12 @@ package com.octodemo.calculator;
 
 public class Calculator {
 
+	// tag::addition[]
 	public double add(double a, double b) {
 	// Implementing some kickass code for a new pull request for Geodis
 		return (a+b);
 	}
+	// end::addition[]
 
 	//This is the checkin implementation
 	public double sub(double a, double b) {
