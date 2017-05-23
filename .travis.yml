@@ -1,4 +1,6 @@
 language: java
 
+rvm:
+  - 2.2
 script:
   - if [[ "$TRAVIS_BRANCH" == "master" && $TRAVIS_PULL_REQUEST == 'false' ]]; then bundle install && bundle exec rake deploy; fi
