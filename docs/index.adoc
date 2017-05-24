@@ -2,7 +2,7 @@
 Alain Hélaïli <helaili@github.com>
 :showtitle:
 :toc: right
-:sourcedir: ../src
+:sourcedir: ..
 :page-title: Caclulator Documentation
 :page-description: An application using cool concepts such as addition and subtraction.
 
@@ -13,7 +13,7 @@ So many awesome things!!!
 === Jenkins
 
 === Travis
-include::{sourcedir}/../.travis.yml[lines:4]
+include::{sourcedir}/.travis.yml[lines:4]
 
 === Java
 
@@ -21,5 +21,5 @@ Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob
 
 [source,java,indent=0]
 ----
-include::{sourcedir}/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
+include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
 ----
