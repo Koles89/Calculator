@@ -36,7 +36,7 @@ include::{sourcedir}/.travis.yml[lines=2..9]
 
 Those bullets above are linked to callouts declared through comments in the original source code.
 
-NOTE: We also need couple other files: `Gemfile` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/Gemfile[source]), `Rakefile` link:https://octodemo.com/OctoCheese/Calculator/blob/master/Rakefile[source]), and `_config.yml` link:https://octodemo.com/OctoCheese/Calculator/blob/master/_config.yml[source]).
+WARNING: We also need couple other files: `Gemfile` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/Gemfile[source]), `Rakefile` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/Rakefile[source]), and `_config.yml` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/_config.yml[source]).
 
 === Java
 
