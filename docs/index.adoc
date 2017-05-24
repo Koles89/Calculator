@@ -13,7 +13,19 @@ So many awesome things!!!
 === Jenkins
 
 === Travis
-include::{sourcedir}/.travis.yml[lines:4]
+Configuration for Travis to build and test this simple Java application
+
+[source,java,indent=0]
+----
+include::{sourcedir}/.travis.yml[lines:1]
+----
+
+Configuration in order for Travis to generate our Asciidoc based Jekyll site: 
+
+[source,java,indent=0]
+----
+include::{sourcedir}/.travis.yml[lines:2..9]
+----
 
 === Java
 
