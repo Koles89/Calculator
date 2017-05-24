@@ -15,14 +15,14 @@ So many awesome things!!!
 === Travis
 Configuration for Travis to build and test this simple Java application
 
-[source,YAML,indent=0]
+[source,YAML]
 ----
 {sourcedir}/.travis.yml[lines=1]
 ----
 
 Configuration in order for Travis to generate our Asciidoc based Jekyll site: 
 
-[source,YAML,indent=0]
+[source,YAML]
 ----
 include::{sourcedir}/.travis.yml[lines=2..9]
 ----
