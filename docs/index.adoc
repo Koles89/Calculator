@@ -23,3 +23,5 @@ Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob
 ----
 include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
 ----
+
+Awesome right? 
