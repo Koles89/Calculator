@@ -25,7 +25,7 @@ Configuration in order for Travis to generate our Asciidoc based Jekyll site:
 :source-highlighter: pygments
 :pygments-style: manni
 :pygments-linenums-mode: inline
-[source,YAML]
+[source,linenums]
 ----
 include::{sourcedir}/.travis.yml[lines=2..9]
 ----
