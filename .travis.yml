@@ -2,6 +2,5 @@ language: java
 
 before_install:
   - rvm install 2.0.0
-  - rvm use 2.0.0 --fuzzy
 script:
   - if [[ "$TRAVIS_BRANCH" == "master" && $TRAVIS_PULL_REQUEST == 'false' ]]; then bundle install && bundle exec rake deploy; fi
