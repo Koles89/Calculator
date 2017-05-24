@@ -5,6 +5,7 @@ Alain Hélaïli <helaili@github.com>
 :sourcedir: ..
 :page-title: Caclulator Documentation
 :page-description: An application using cool concepts such as addition and subtraction.
+:icons: font
 
 == What's in the app?
 
