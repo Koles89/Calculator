@@ -15,9 +15,9 @@ So many awesome things!!!
 === Travis
 Configuration for Travis to build and test this simple Java application
 
-[source]
+[source,YAML]
 ----
-{sourcedir}/.travis.yml[lines=1]
+include::{sourcedir}/.travis.yml[lines=1]
 ----
 
 Configuration in order for Travis to generate our Asciidoc based Jekyll site: 
@@ -35,9 +35,27 @@ Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob
 :source-highlighter: pygments
 :pygments-style: manni
 :pygments-linenums-mode: inline
+
 [source,Java,indent=0,linenums]
 ----
 include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
 ----
 
 Awesome right? 
+
+:source-highlighter: pygments
+:pygments-style: manni
+:pygments-linenums-mode: inline
+
+[source,ruby,linenums]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I'
+   #'lowergreek' => 'a'
+   #'arabic'     => '1'
+   #'decimal'    => '1'
+}
+----
