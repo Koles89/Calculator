@@ -1,6 +1,9 @@
 language: java
-
 before_install:
-  - rvm install 2.0.0
+- rvm install 2.0.0
 script:
-  - if [[ "$TRAVIS_BRANCH" == "master" && $TRAVIS_PULL_REQUEST == 'false' ]]; then bundle install && bundle exec rake deploy; fi
+- if [[ "$TRAVIS_BRANCH" == "master" && $TRAVIS_PULL_REQUEST == 'false' ]]; then bundle
+  install && bundle exec rake deploy; fi
+env:
+  global:
+    secure: R43NSUAR9No3FZpVI7qZ6cQ4R4MFb48ReGBpclKCL4g98YUF8B+wTbT1LYDMnvntF0G0ZTUAHTiV5lsTGinIbtTUFpx2z9bERqll6diG++dGaXzsse0h3BLiuxhTC3OxZ4HluHwri5FVZsA7w0Y6GKanf0z7OyGVf3btmeKB38BobjsAUl7JUgxt1DgWFMm/feiV4EwrQBVCOV9ZedVWCetsaoJfk8MNclk2PPDxjgH0pkxwVhVk40lh8dO6GLfSWyS7jqSRxTtjNM+a7HvheqlC3ZvulnYHXc9ZP20w2YIvx0PbTBbIhhHceIdcCKipLGsu3dq3lgO2jG6fJpPbeYf9r7/o125KxqB/7M8+bxENI520JeC6D3bOA9bSBmitVc9LB6nOZtrwOAr4CNfWU+sJtlNlsm1/fIS8bDilRwqa6x3ujLiRynL1tEQE+etHM/AffLmswPqhEcOqBhPBldMXZEHPZuSrJJQOEDiVukCzjZUcrBPdCycxUXGucITKUgRBlMl0QVPQqukg8atJlPmD/dXuzzWIKixEXN7+66vZvRgmdMU9OqXrFcbBfXtb5jfD0WKcIK6AvgLJYcmQr4TBCOZws0YiNzabGD0oCmcKX2xdKxEhNoJEorKDukL0QDGo/Z2Ty1dcJ9bNopUSl2gFREeGOmAoRGwNg1pZAYk=
