@@ -20,7 +20,7 @@ Configuration for Travis to build and test this simple Java application
 include::{sourcedir}/.travis.yml[lines=1]
 ----
 
-Configuration in order for Travis to generate our Asciidoc based Jekyll site: 
+Configuration in order for Travis to generate our Asciidoc based Jekyll site:
 
 [source,YAML]
 ----
@@ -28,8 +28,8 @@ include::{sourcedir}/.travis.yml[lines=2..9]
 ----
 
 <1> Install a recent enough version of Ruby
-<2> Call the Rake task which will take care of generating the Jekyll site 
-<3> We need token for Travis to write back to the repo 
+<2> Call the Rake task which will take care of generating the Jekyll site
+<3> We need a token for Travis to write back to the repo 
 
 === Java
 
@@ -40,7 +40,7 @@ Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob
 include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
 ----
 
-Awesome right? 
+Awesome right?
 
 :source-highlighter: pygments
 :pygments-style: manni
