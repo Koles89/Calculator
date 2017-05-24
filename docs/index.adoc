@@ -1,11 +1,11 @@
 = ChangeNow Documentation
-Alain Hélaïli <helaili@github.com>
+:icons: font
 :showtitle:
 :toc: right
 :sourcedir: ..
 :page-title: Caclulator Documentation
 :page-description: An application using cool concepts such as addition and subtraction.
-:icons: font
+
 
 == What's in the app?
 
