@@ -22,7 +22,7 @@ include::{sourcedir}/.travis.yml[lines=1]
 
 Configuration in order for Travis to generate our Asciidoc based Jekyll site: 
 
-[source]
+[source,YAML]
 ----
 include::{sourcedir}/.travis.yml[lines=2..9]
 ----
@@ -36,7 +36,7 @@ Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob
 :pygments-style: manni
 :pygments-linenums-mode: inline
 
-[source,Java,indent=0,linenums]
+[source,java,linenums,indent=0]
 ----
 include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
 ----
