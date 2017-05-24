@@ -14,7 +14,7 @@ So many awesome things!!!
 
 === Travis
 
-Travis is configured with link:https://octodemo.com/OctoCheese/Calculator/blob/master/.travis.yml[a `.travis.yml` file]. All the snippets below are directly extracted from the source file, not copy/pasted. This is a living documentation.
+Travis is configured with a `.travis.yml` link:https://octodemo.com/OctoCheese/Calculator/blob/master/.travis.yml[file]. All the snippets below are directly extracted from the source file, not copy/pasted. This is a living documentation.
 
 Configuration for Travis to build and test this simple Java application
 
@@ -34,7 +34,7 @@ include::{sourcedir}/.travis.yml[lines=2..9]
 <2> Call the Rake task which will take care of generating the Jekyll site
 <3> We need a token for Travis to write back to the repo
 
-Those bullets above are linked to callouts declared through comments in the original source code. 
+Those bullets above are linked to callouts declared through comments in the original source code.
 
 === Java
 
