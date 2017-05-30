@@ -4,14 +4,14 @@ public class Calculator {
 
 	// tag::addition[]
 	public double add(double a, double b) {
-	// Implementing some kickass code for a new pull request for LITASCO
+	// Implementing some kickass code for a new pull request for Air Liquide
 		return (a+b);
 	}
 	// end::addition[]
 
 	//This is the checkin implementation
 	public double sub(double a, double b) {
-		// This is the way it should be ????
+		// This is the way it should be !!!!!
 		return a-b;
 	}
 
