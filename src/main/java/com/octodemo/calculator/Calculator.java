@@ -4,7 +4,7 @@ public class Calculator {
 
 	// tag::addition[]
 	public double add(double a, double b) {
-	// Implementing some kickass code for a new pull request for Air Liquide
+	// Implementing some kickass code for a new pull request for Bluemix
 		return (a+b);
 	}
 	// end::addition[]
