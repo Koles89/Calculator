@@ -4,7 +4,7 @@ public class Calculator {
 
 	// tag::addition[]
 	public double add(double a, double b) {
-	// Implementing some kickass code for a new pull request for you
+	// Implementing some kickass code for a new pull request for RAC
 		return (a+b);
 	}
 	// end::addition[]
@@ -17,7 +17,7 @@ public class Calculator {
 
 
 	public double multiply(double a, double b) {
-		//Change alimentation
+		//Change alimentation!!!!
 		return a*b;
 	}
 
