@@ -4,7 +4,7 @@ public class Calculator {
 
 	// tag::addition[]
 	public double add(double a, double b) {
-	// Implementing some kickass code for a new pull request for Petit Forestier
+	// Implementing some kickass code for a new pull request for Axa
 		return (a+b);
 	}
 	// end::addition[]
@@ -24,6 +24,7 @@ public class Calculator {
 	// Division
 	public double div(double a, double b) {
 		return a/b;
+	//Comment
 	}
 
 
