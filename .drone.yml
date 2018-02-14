@@ -1,0 +1,6 @@
+pipeline:
+  build:
+    image: maven
+    commands:
+      mvn test -B -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true
+      

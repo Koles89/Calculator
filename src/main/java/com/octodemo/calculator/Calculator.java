@@ -2,9 +2,14 @@ package com.octodemo.calculator;
 
 public class Calculator {
 
+	/*
+	* @TODO Fix this code
+	* @BODY That would be awesome
+	*/
+  
 	// tag::addition[]
 	public double add(double a, double b) {
-	// Implementing some kickass code for a new pull request for Axa
+	// Implementing some kickass code for a new pull request - drone?
 		return (a+b);
 	}
 	// end::addition[]
