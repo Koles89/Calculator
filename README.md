@@ -2,6 +2,8 @@
 
 This is the ultimate crazy scientific calculator (limited to 4 operations) without any ~~Bugs~~
 
+Check [**the beautiful AsciiDoc/Pages site**](https://pages.octodemo.com/OctoCheese/Calculator/) for the full documentation. 
+
 [Backlog](https://octodemo.com/OctoCheese/Calculator/issues?q=is%3Aopen+is%3Aissue+label%3ABacklog)
 
 # Deploy
@@ -15,7 +17,7 @@ curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "mybran
 curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -d '{"ref": "mybranch", "environment" : "Test Lab", "description" : "Ready for user acceptance", "required_contexts": ["continuous-integration/jenkins/build"]}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments
 ```
 
-Output 
+Output
 
 ```
 {
@@ -36,7 +38,7 @@ Output
 }
 ```
 
-Now retrieve the deployment Id to send feedback about the deployment 
+Now retrieve the deployment Id to send feedback about the deployment
 
 ## Set status
 
@@ -45,13 +47,13 @@ curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN"  -H "accept: applic
 ```
 
 ## Completed
-- For non-transient environments 
+- For non-transient environments
 
 ```
 curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -H "accept: application/vnd.github.ant-man-preview+json" -d '{"state": "success", "description": "Deploying to Test Lab...", "log_url": "http://deploysystem.com/logs", "environment_url": "http://patch.myapp.com"}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142/statuses
 ```
 
-- For transient environments 
+- For transient environments
 
 ```
 curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -H "accept: application/vnd.github.ant-man-preview+json" -d '{"state": "success", "description": "Deploying to Test Lab...", "log_url": "http://deploysystem.com/logs", "environment_url": "http://patch.myapp.com", "auto_inactive": false}' https://octodemo.com/api/v3/repos/OctoCheese/Calculator/deployments/2142/statuses
@@ -59,8 +61,8 @@ curl -k -H "Authorization: token $GHE_PERSONAL_ACCESS_TOKEN" -H "accept: applica
 
 
 # Content
-- Issues 
-- Milestones 
+- Issues
+- Milestones
 - [Contributing guidelines](https://octodemo.com/OctoCheese/Calculator/blob/master/CONTRIBUTING.md) with **issue templates**
 - Releases
 - *Badges*
@@ -75,13 +77,13 @@ public void methodName(String param1, int param2) {
 }
 ````
 
-And create arrays : 
+And create arrays :
 
 |Col 1|Col 2|Col 3|
 |-----|-----|-----|
 |Val 1|Val 2|Val 3|
 |Val 1|Val 2|Val 3|
 |Val 1|Val 2|Val 3|
-  
-  
+
+
 [Show me the bugs](https://octodemo.com/OctoCheese/Calculator/issues?q=is%3Aopen+is%3Aissue+label%3A%22bug+-+severity+1%22)

@@ -1,0 +1,55 @@
+= ChangeNow Documentation
+:icons: font
+:showtitle:
+:toc: right
+:sourcedir: ..
+:page-title: Caclulator Documentation
+:page-description: An application using cool concepts such as addition and subtraction.
+
+
+== What's in the app?
+
+So many awesome things!!!
+
+=== Jenkins
+
+=== Travis
+
+Travis is configured with a `.travis.yml` link:https://octodemo.com/OctoCheese/Calculator/blob/master/.travis.yml[file]. All the snippets below are directly extracted from the source file, not copy/pasted. This is a living documentation.
+
+Configuration for Travis to build and test this simple Java application
+
+[source,YAML]
+----
+include::{sourcedir}/.travis.yml[lines=1]
+----
+
+Configuration in order for Travis to generate our Asciidoc based Jekyll site:
+
+[source,YAML]
+----
+include::{sourcedir}/.travis.yml[lines=2..9]
+----
+
+<1> Install a recent enough version of Ruby
+<2> Call the Rake task which will take care of generating the Jekyll site
+<3> We need a token for Travis to write back to the repo
+
+Those bullets above are linked to callouts declared through comments in the original source code.
+
+WARNING: We also need couple other files: `Gemfile` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/Gemfile[source]), `Rakefile` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/Rakefile[source]), and `_config.yml` (link:https://octodemo.com/OctoCheese/Calculator/blob/master/_config.yml[source]).
+
+=== Java
+
+Checkout how couple tags in link:https://octodemo.com/OctoCheese/Calculator/blob/master/src/main/java/com/octodemo/calculator/Calculator.java#L5[the source code] can help generating the documentation below.
+
+[source,java,linenums,indent=0]
+----
+include::{sourcedir}/src/main/java/com/octodemo/calculator/Calculator.java[tags=addition]
+----
+
+Awesome right?
+
+:source-highlighter: pygments
+:pygments-style: manni
+:pygments-linenums-mode: inline
